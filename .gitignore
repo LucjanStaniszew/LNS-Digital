@@ -1,3 +1,6 @@
 .vscode/
 notas.txt
 node_modules/
+styles/styles.css.map
+package.json
+package-lock.json

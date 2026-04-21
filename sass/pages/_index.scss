@@ -1,0 +1,52 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.home{
+    height: 80vh;
+    @include m.flex(column, nowrap, start, center, 0);
+    row-gap: 100px;
+    .home-desc{
+        @include m.flex(row, nowrap, center, center, 100px);
+        p{
+            width: 40vw;
+        }
+        img.home-img{
+            height: 40vh;
+            width: auto;
+        }
+    }
+    @include m.tablet{
+        height: auto;
+        row-gap: 50px;
+        .home-desc{
+            flex-direction: column;
+            gap: 0;
+            font-size: 1.3rem;
+            width: 80vw;
+            p{
+                width: auto;
+            }
+            img.home-img{
+                width: 80vw;
+                height: auto;
+            }
+        }
+    }
+    @include m.mobile{
+        height: auto;
+        row-gap: 25px;
+        .home-desc{
+            flex-direction: column;
+            gap: 0;
+            font-size: 1.3rem;
+            width: 80vw;
+            p{
+                width: auto;
+            }
+            img.home-img{
+                width: 80vw;
+                height: auto;
+            }
+        }
+    }
+}

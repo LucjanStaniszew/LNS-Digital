@@ -14,13 +14,14 @@
             li{
                 a{
                     img.rrss{
-                        height: 7vh;
+                        height: 5vh;
                         width: auto;
                     }
                     img.wa{
                         position: fixed;
                         bottom: 50px;
                         right: 50px;
+                        animation: vibrate 1s 500ms ease infinite; // El primer valor en segundos o ms es el tiempo de la animación --- El segundo valor de segundos o ms es el delay para comenzar // ease _ ease-in _ ease-out _ ease-in-out // 
                     }
                 }
             }
@@ -40,6 +41,9 @@
                         img.rrss{
                             height: 6vh;
                         }
+                        img.wa{
+                            animation: none;
+                        }
                     }
                 }
             }
@@ -58,6 +62,9 @@
                     a{
                         img.rss{
                             height: 5vh;
+                        }
+                        img.wa{
+                            animation: none;
                         }
                     }
                 }

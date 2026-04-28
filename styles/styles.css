@@ -21,6 +21,41 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0 1px navy, 0 0 2px blue, 0 0 5px navy, 0 0 15px blue, 0 0 25px navy, 0 0 50px blue, 0 0 100px navy;
 }
 
+@keyframes vibrate {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  10% {
+    transform: translateX(0) translateY(-15px);
+  }
+  20% {
+    transform: translateX(-10px) translateY(-15px);
+  }
+  30% {
+    transform: translateX(10px) translateY(-15px);
+  }
+  40% {
+    transform: translateX(-10px) translateY(-15px);
+  }
+  50% {
+    transform: translateX(10px) translateY(-15px);
+  }
+  60% {
+    transform: translateX(-10px) translateY(-15px);
+  }
+  70% {
+    transform: translateX(10px) translateY(-15px);
+  }
+  80% {
+    transform: translateX(-10px) translateY(-15px);
+  }
+  90% {
+    transform: translateX(0) translateY(-15px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
 .header {
   height: 10vh;
   background-color: black;
@@ -57,13 +92,14 @@ h1, h2, h3, h4, h5, h6 {
   column-gap: 20px;
 }
 .footer nav .rs li a img.rrss {
-  height: 7vh;
+  height: 5vh;
   width: auto;
 }
 .footer nav .rs li a img.wa {
   position: fixed;
   bottom: 50px;
   right: 50px;
+  animation: vibrate 1s 500ms ease infinite;
 }
 @media (max-width: 968px) and (min-width: 561px) {
   .footer {
@@ -78,6 +114,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .footer nav .rs li a img.rrss {
     height: 6vh;
+  }
+  .footer nav .rs li a img.wa {
+    animation: none;
   }
 }
 @media (max-width: 560px) and (min-width: 300px) {
@@ -94,8 +133,14 @@ h1, h2, h3, h4, h5, h6 {
   .footer nav .rs li a img.rss {
     height: 5vh;
   }
+  .footer nav .rs li a img.wa {
+    animation: none;
+  }
 }
 
+.home h1 {
+  animation: rubberBand 1s infinite ease;
+}
 .home {
   height: 80vh;
   display: flex;
@@ -120,6 +165,10 @@ h1, h2, h3, h4, h5, h6 {
 .home .home-desc img.home-img {
   height: 40vh;
   width: auto;
+  transition: all 3s ease;
+}
+.home .home-desc img.home-img:hover {
+  scale: 1.2;
 }
 @media (max-width: 968px) and (min-width: 561px) {
   .home {
@@ -223,6 +272,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .gal .note2 {
   grid-area: note2;
+}
+.gal div {
+  overflow: hidden;
+}
+.gal div img {
+  transition: transform 1s ease;
+  object-fit: cover;
+  transform-origin: center;
+}
+.gal div img:hover {
+  transform: scale(1.5);
 }
 @media (max-width: 968px) and (min-width: 561px) {
   .gal {

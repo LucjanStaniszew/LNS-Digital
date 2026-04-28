@@ -33,6 +33,20 @@
     .note1{grid-area: note1;}
     .note2{grid-area: note2;}
 
+    div{ //Padre
+        overflow: hidden; // NO tiene que pasarse de sus limites
+        img{//Hijo
+            transition: transform 1s ease;
+            object-fit: cover; //Esto hace que mantenga el espacio que le asigna el objeto
+            transform-origin: center; // le indica desde donde debe hacer la transformación
+            &:hover{
+                transform: scale(1.5);
+                // scale: 1.5;
+            }
+        }
+    }
+        
+
     @include m.tablet{
         display: grid;
         grid-template-areas:

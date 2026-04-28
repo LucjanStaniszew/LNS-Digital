@@ -2,6 +2,9 @@
 @use "../utilities/mixins" as m;
 
 .home{
+    h1{
+        animation: rubberBand 1s infinite ease;
+    }
     height: 80vh;
     @include m.flex(column, nowrap, start, center, 0);
     row-gap: 100px;
@@ -13,6 +16,10 @@
         img.home-img{
             height: 40vh;
             width: auto;
+            transition: all 3s ease;
+            &:hover{
+                    scale: 1.2;
+                }
         }
     }
     @include m.tablet{
@@ -29,6 +36,7 @@
             img.home-img{
                 width: 80vw;
                 height: auto;
+                
             }
         }
     }
